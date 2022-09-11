@@ -416,6 +416,8 @@ class MainApp(MDApp):
             new_q = q + 1
             self.quentity3 = new_q
         self.cursor.execute(f"INSERT INTO menue (q3) VALUES (%s )", new_q)
+        self.db_connection.commit()
+
 
 
     def additem4(self,item, price ):
@@ -466,6 +468,8 @@ class MainApp(MDApp):
         
 
     def logger(self):
+        
+
         self.root.current = 'second'
         
         #self.root.manager.transition.direction = "left"
