@@ -1,0 +1,1240 @@
+WindowManager:
+	FirstWindow:
+	SecondWindow:
+	ThirdWindow:
+	FourthWindow:
+	FifthWindow:
+
+
+<FirstWindow>:
+    name: 'first'
+    Screen:
+        Image:
+            source: "C:/Users/RUDAINA/Desktop/sh/background.jpg"
+            allow_stretch: True
+            keep_ratio: False
+
+        MDCard:
+            size_hint: (0.8, 0.8)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            #elevation: 10
+            padding: 15
+            spacing: 10
+            orientation: 'vertical'
+
+            Image:
+                source: "C:/Users/RUDAINA/Desktop/sh/logo.png"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+            MDLabel:
+                id: welcome_label
+                text: "WELCOME TO QUICKBITE"
+                font_size: 25
+                halign: 'center'
+                size_hint_y: 0.5
+                #height: self.texture_size[1]
+                padding_y: 10
+
+            MDLabel:
+                id: name_label
+                text: "Please Enter Your Name"
+                font_size: 15
+                halign: 'center'
+                size_hint_y: 0.5
+
+                #height: self.texture_size[1]
+                padding_y: 10
+
+            MDTextField:
+                id: name
+                hint_text: "name"
+                size_hint_x: 0.5
+                font_size: 18
+                pos_hint: {"center_x": 0.5}
+
+
+            MDRoundFlatButton:
+                text: "TAKE A QUICK BITE"
+                font_size: 12
+                pos_hint: {"center_x": 0.5}
+                on_press: app.logger()
+
+            Widget:
+                size_hint_y: 0.5
+<SecondWindow>:
+    name: 'second'
+    Screen:
+        Image:
+            source: "C:/Users/RUDAINA/Desktop/sh/background.jpg"
+            allow_stretch: True
+            keep_ratio: False
+
+        MDCard:
+            size_hint: (0.9, 0.9)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            #elevation: 10
+            padding: 15
+            spacing: 10
+            orientation: 'vertical'
+
+
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: (0.8, 0.8)
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                #elevation: 10
+                padding: 15
+                spacing: 10
+                GridLayout:
+                    cols: 2
+                    spacing: 10
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                    MDLabel:
+                        id: welcome_label1
+                        text: "EXISTING REQUESTS"
+                        font_size: 25
+                        halign: 'center'
+                        size_hint_y: 0.5
+                        #height: self.texture_size[1]
+                        padding_y: 10
+
+                    #Label:
+                     #   text: "EXISTING REQUEST"
+                      #  font_size: 16
+                       # color: (0,0,0,1)
+                        #background_color: (0,0,0,1)
+                        #canvas.before:
+                         #   Color:
+                          #      rgba: self.background_color
+                           # Rectangle:
+                            #    size: self.size
+                             #   pos: self.pos
+                        #size_hint_y: None
+                        #height: self.texture_size[1]
+                        #allow_stretch: True
+                        #padding_y: 5
+                        #halign: 'center'
+
+
+
+
+                    Button:
+                        text: "NEW"
+                        font_size: 16
+                        on_release: app.newrequest()
+                            #app.root.current = "fifth"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                GridLayout:
+                    cols: 3
+                    spacing: 10
+                    background_color: (128/255,128/255,128/255,1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    padding: 10
+
+                    Image:
+                        source: "C:/Users/RUDAINA/Desktop/sh/logo.png"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                    BoxLayout:
+                        orientation: 'vertical'
+                        spacing: 10
+                        Label:
+                            text: "Second Screen"
+                            font_size: 13
+                            color: (0,0,0,1)
+                            background_color: (1,1,1,1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+
+                            height: self.texture_size[1]
+                            padding_y: 10
+                            padding_x: 10
+                            halign: 'center'
+                            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        Button:
+                            text: "Go Back"
+                            font_size: 32
+                            on_release:
+                                app.root.current = "third"
+                                #root.manager.transition.direction = "right"
+
+                    BoxLayout:
+                        orientation: 'vertical'
+                        spacing: 10
+                        Label:
+                            text: "Second Screen"
+                            font_size: 13
+                            color: (0,0,0,1)
+                            background_color: (1,1,1,1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+
+                            height: self.texture_size[1]
+                            padding_y: 10
+                            padding_x: 10
+                            halign: 'center'
+                            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        Label:
+                            text: "Second Screen"
+                            font_size: 13
+                            color: (0,0,0,1)
+                            background_color: (1,1,1,1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+
+                            height: self.texture_size[1]
+                            padding_y: 10
+                            padding_x: 10
+                            halign: 'center'
+                            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                GridLayout:
+                    cols: 3
+                    spacing: 10
+                    background_color: (128/255,128/255,128/255,1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    padding: 10
+
+                    Image:
+                        source: "C:/Users/RUDAINA/Desktop/sh/logo.png"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                    BoxLayout:
+                        orientation: 'vertical'
+                        spacing: 10
+                        Label:
+                            text: "Second Screen"
+                            font_size: 13
+                            color: (0,0,0,1)
+                            background_color: (1,1,1,1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+
+                            height: self.texture_size[1]
+                            padding_y: 10
+                            padding_x: 10
+                            halign: 'center'
+                            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        Button:
+                            text: "Go Back"
+                            font_size: 32
+                            on_release:
+                                app.root.current = "fifth"
+                                #root.manager.transition.direction = "right"
+
+                    BoxLayout:
+                        orientation: 'vertical'
+                        spacing: 10
+                        Label:
+                            text: "Second Screen"
+                            font_size: 13
+                            color: (0,0,0,1)
+                            background_color: (1,1,1,1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+
+                            height: self.texture_size[1]
+                            padding_y: 10
+                            padding_x: 10
+                            halign: 'center'
+                            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        Label:
+                            text: "Second Screen"
+                            font_size: 13
+                            color: (0,0,0,1)
+                            background_color: (1,1,1,1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+
+                            height: self.texture_size[1]
+                            padding_y: 10
+                            padding_x: 10
+                            halign: 'center'
+                            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                GridLayout:
+                    cols: 3
+                    spacing: 10
+                    background_color: (128/255,128/255,128/255,1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    padding: 10
+
+                    Image:
+                        source: "C:/Users/RUDAINA/Desktop/sh/logo.png"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                    BoxLayout:
+                        orientation: 'vertical'
+                        spacing: 10
+                        Label:
+                            text: "Second Screen"
+                            font_size: 13
+                            color: (0,0,0,1)
+                            background_color: (1,1,1,1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+
+                            height: self.texture_size[1]
+                            padding_y: 10
+                            padding_x: 10
+                            halign: 'center'
+                            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        Button:
+                            text: "Go Back"
+                            font_size: 32
+                            on_release:
+                                app.root.current = "first"
+                                #root.manager.transition.direction = "right"
+
+                    BoxLayout:
+                        orientation: 'vertical'
+                        spacing: 10
+                        Label:
+                            text: "Second Screen"
+                            font_size: 13
+                            color: (0,0,0,1)
+                            background_color: (1,1,1,1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+
+                            height: self.texture_size[1]
+                            padding_y: 10
+                            padding_x: 10
+                            halign: 'center'
+                            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        Label:
+                            text: "Second Screen"
+                            font_size: 13
+                            color: (0,0,0,1)
+                            background_color: (1,1,1,1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+
+                            height: self.texture_size[1]
+                            padding_y: 10
+                            padding_x: 10
+                            halign: 'center'
+                            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+<ThirdWindow>:
+    name: 'third'
+    Screen:
+        Image:
+            source: "C:/Users/RUDAINA/Desktop/sh/background.jpg"
+            allow_stretch: True
+            keep_ratio: False
+
+        MDCard:
+            size_hint: (0.9, 0.9)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            #elevation: 10
+            padding: 15
+            spacing: 10
+            orientation: 'vertical'
+
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: 10
+
+                MDLabel:
+                    id: restaurant_name
+                    text: "resturent name"
+                    font_size: 25
+                    halign: 'center'
+                    size_hint_y: 0.5
+                    #height: self.texture_size[1]
+                    padding_y: 10
+
+                Image:
+                    source: "C:/Users/RUDAINA/Desktop/sh/logo.png"
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                GridLayout:
+                    cols: 5
+                    spacing: 10
+                    padding: 10
+                    #orientation: 'horizontal'
+
+                    Label:
+                        id: request_item1
+                        text: app.item1
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Button:
+                        id: request_item1_plus
+                        text: "+"
+                        font_size: 16
+                        on_release: app.additem1(app.item1, app.price1)
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (0,1,0,1)
+
+                    Label:
+                        id: request_item1_count
+                        text: app.quentity1
+                        font_size: 13
+                        color: (0,0,0,1)
+
+
+                    Button:
+                        id: request_item1_minus
+                        text: "-"
+                        font_size: 16
+                        on_release:
+                            app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (1,0,0,1)
+
+                    Label:
+                        id: request_item1_price
+                        text: app.price1
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                GridLayout:
+                    cols: 5
+                    spacing: 10
+                    padding: 10
+                    #orientation: 'horizontal'
+                    Label:
+                        id: request_item3
+                        text: app.item2
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Button:
+                        id: request_item3_plus
+                        text: "+"
+                        font_size: 16
+                        on_release: app.additem2(app.item2, app.price2)
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (0,1,0,1)
+
+                    Label:
+                        id: request_item3_count
+                        text: app.quentity2
+                        font_size: 13
+                        color: (0,0,0,1)
+
+
+                    Button:
+                        id: request_item3_minus
+                        text: "-"
+                        font_size: 16
+                        on_release:
+                            app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (1,0,0,1)
+
+                    Label:
+                        id: request_item3_price
+                        text: app.price2
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                GridLayout:
+                    cols: 5
+                    spacing: 10
+                    padding: 10
+                    #orientation: 'horizontal'
+
+                    Label:
+                        id: request_item4
+                        text: app.item3
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Button:
+                        id: request_item4_plus
+                        text: "+"
+                        font_size: 16
+                        on_release: app.additem3(app.item3, app.price3)
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (0,1,0,1)
+
+                    Label:
+                        id: request_item1_count
+                        text: app.quentity3
+                        font_size: 13
+                        color: (0,0,0,1)
+
+
+                    Button:
+                        id: request_item4_minus
+                        text: "-"
+                        font_size: 16
+                        on_release:
+                            app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (1,0,0,1)
+
+                    Label:
+                        id: request_item4_price
+                        text: app.price4
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                GridLayout:
+                    cols: 5
+                    spacing: 10
+                    padding: 10
+                    #orientation: 'horizontal'
+                    Label:
+                        id: request_item2
+                        text: app.item5
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Button:
+                        id: request_item4_plus
+                        text: "+"
+                        font_size: 16
+                        on_release: app.additem2(app.item5, app.price5)
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (0,1,0,1)
+
+                    Label:
+                        id: request_item2_count
+                        text: app.item4
+                        font_size: 13
+                        color: (0,0,0,1)
+
+
+                    Button:
+                        id: request_item4_minus
+                        text: "-"
+                        font_size: 16
+                        on_release: app.additem4
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (1,0,0,1)
+
+                    Label:
+                        id: request_item4_price
+                        text: app.price4
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                GridLayout:
+                    cols: 5
+                    spacing: 10
+                    padding: 10
+                    #orientation: 'horizontal'
+
+                    Label:
+                        id: request_item5
+                        text: app.item5
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Button:
+                        id: request_item5_plus
+                        text: "+"
+                        font_size: 16
+                        on_release: app.additem5(app.item5, app.price5)
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (0,1,0,1)
+
+                    Label:
+                        id: request_item5_count
+                        text: app.quentity5
+                        font_size: 13
+                        color: (0,0,0,1)
+
+
+                    Button:
+                        id: request_item5_minus
+                        text: "-"
+                        font_size: 16
+                        on_release:
+                            app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (1,0,0,1)
+
+                    Label:
+                        id: request_item5_price
+                        text: app.price5
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                MDTextField:
+                    id: request_name
+                    hint_text: "name"
+                    size_hint_x: 0.5
+                    font_size: 18
+                    pos_hint: {"center_x": 0.5}
+
+                MDRoundFlatButton:
+                    text: "SUBMIT"
+                    font_size: 12
+                    pos_hint: {"center_x": 0.5}
+                    on_press: app.logger()
+
+                Label:
+                    text: "Order Total"
+                    font_size: 13
+                    color: (0,0,0,1)
+
+                Label:
+                    id: request_total
+                    text: "$0"
+                    font_size: 13
+                    color: (0,0,0,1)
+
+<FourthWindow>:
+    name: 'fourth'
+    Screen:
+        Image:
+            source: "C:/Users/RUDAINA/Desktop/sh/background.jpg"
+            allow_stretch: True
+            keep_ratio: False
+
+        MDCard:
+            size_hint: (0.9, 0.9)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            #elevation: 10
+            padding: 15
+            spacing: 10
+            orientation: 'vertical'
+
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: 10
+
+                MDLabel:
+                    id: restaurant_name
+                    text: "restaurant name"
+                    font_size: 25
+                    halign: 'center'
+                    size_hint_y: 0.5
+                    #height: self.texture_size[1]
+                    padding_y: 10
+
+                Image:
+                    source: "C:/Users/RUDAINA/Desktop/sh/logo.png"
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                GridLayout:
+                    cols: 5
+                    spacing: 10
+                    padding: 10
+                    #orientation: 'horizontal'
+
+                    Label:
+                        id: order_item1
+                        text: app.item1
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Button:
+                        id: order_item1_plus
+                        text: "+"
+                        font_size: 16
+                        on_release: app.additem1(app.item1, app.price1)
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (0,1,0,1)
+
+                    Label:
+                        id: order_item1_count
+                        text: app.quentity1
+                        font_size: 13
+                        color: (0,0,0,1)
+
+
+                    Button:
+                        id: order_item1_minus
+                        text: "-"
+                        font_size: 16
+                        on_release:
+                            app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (1,0,0,1)
+
+                    Label:
+                        id: order_item1_price
+                        text: app.price1
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                GridLayout:
+                    cols: 5
+                    spacing: 10
+                    padding: 10
+                    #orientation: 'horizontal'
+                    Label:
+                        id: order_item3
+                        text: app.item2
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Button:
+                        id: order_item3_plus
+                        text: "+"
+                        font_size: 16
+                        on_release: app.additem2(app.item2, app.price2)
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (0,1,0,1)
+
+                    Label:
+                        id: order_item3_count
+                        text: app.quentity2
+                        font_size: 13
+                        color: (0,0,0,1)
+
+
+                    Button:
+                        id: order_item3_minus
+                        text: "-"
+                        font_size: 16
+                        on_release:
+                            app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (1,0,0,1)
+
+                    Label:
+                        id: order_item3_price
+                        text: app.price2
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                GridLayout:
+                    cols: 5
+                    spacing: 10
+                    padding: 10
+                    #orientation: 'horizontal'
+
+                    Label:
+                        id: order_item4
+                        text: app.item3
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Button:
+                        id: order_item4_plus
+                        text: "+"
+                        font_size: 16
+                        on_release: app.additem3(app.item3, app.price3)
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (0,1,0,1)
+
+                    Label:
+                        id: order_item1_count
+                        text: app.quentity3
+                        font_size: 13
+                        color: (0,0,0,1)
+
+
+                    Button:
+                        id: order_item4_minus
+                        text: "-"
+                        font_size: 16
+                        on_release:
+                            app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (1,0,0,1)
+
+                    Label:
+                        id: order_item4_price
+                        text: app.price3
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                GridLayout:
+                    cols: 5
+                    spacing: 10
+                    padding: 10
+                    #orientation: 'horizontal'
+                    Label:
+                        id: order_item2
+                        text: app.item4
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Button:
+                        id: order_item4_plus
+                        text: "+"
+                        font_size: 16
+                        on_release: app.additem4(app.item3, app.price4)
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (0,1,0,1)
+
+                    Label:
+                        id: order_item2_count
+                        text: app.quentity4
+                        font_size: 13
+                        color: (0,0,0,1)
+
+
+                    Button:
+                        id: order_item4_minus
+                        text: "-"
+                        font_size: 16
+                        on_release:
+                            app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (1,0,0,1)
+
+                    Label:
+                        id: order_item4_price
+                        text: app.price4
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                GridLayout:
+                    cols: 5
+                    spacing: 10
+                    padding: 10
+                    #orientation: 'horizontal'
+
+                    Label:
+                        id: order_item5
+                        text: app.item5
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Button:
+                        id: order_item5_plus
+                        text: "+"
+                        font_size: 16
+                        on_release: app.additem5(app.item5, app.price5)
+                            #app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        #halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (0,1,0,1)
+
+                    Label:
+                        id: order_item5_count
+                        text: app.quentity5
+                        font_size: 13
+                        color: (0,0,0,1)
+
+
+                    Button:
+                        id: order_item5_minus
+                        text: "-"
+                        font_size: 16
+                        on_release:
+                            app.root.current = "first"
+                            #root.manager.transition.direction = "right"
+                        size_hint_x: 0.5
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                        halign: 'center'
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        color: (1,0,0,1)
+
+                    Label:
+                        id: order_item5_price
+                        text: app.price5
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                MDTextField:
+                    id: order_name
+                    hint_text: "Name"
+                    size_hint_x: 0.5
+                    font_size: 18
+                    pos_hint: {"center_x": 0.5}
+
+                MDTextField:
+                    id: location
+                    hint_text: "Location"
+                    size_hint_x: 0.5
+                    font_size: 18
+                    pos_hint: {"center_x": 0.5}
+
+                MDTextField:
+                    id: phone_number
+                    hint_text: "Phone Number"
+                    size_hint_x: 0.5
+                    font_size: 18
+                    pos_hint: {"center_x": 0.5}
+
+                GridLayout:
+                    cols: 4
+                    spacing: 10
+                    padding: 10
+                    Label:
+                        text: "Order Total"
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Label:
+                        text: "Taxes"
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Label:
+                        text: "Delivery"
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Label:
+                        text: "Sub Total"
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                GridLayout:
+                    cols: 4
+                    spacing: 10
+                    padding: 10
+                    Label:
+                        id: order_total
+                        text: "$0"
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Label:
+                        id: order_taxes
+                        text: "$0"
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Label:
+                        id: order_delivery
+                        text: "$0"
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                    Label:
+                        id: order_sub_total
+                        text: "your mom"
+                        font_size: 13
+                        color: (0,0,0,1)
+
+                MDRoundFlatButton:
+                    text: "REQUEST"
+                    font_size: 12
+                    pos_hint: {"center_x": 0.5}
+                    on_release: app.submit(name, location, phone_number)
+
+<FifthWindow>:
+    name: "fifth"
+    Screen:
+        Image:
+            source: "C:/Users/RUDAINA/Desktop/sh/background.jpg"
+            allow_stretch: True
+            keep_ratio: False
+
+        MDCard:
+            size_hint: (0.9, 0.9)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            #elevation: 10
+            padding: 15
+            spacing: 10
+            orientation: 'vertical'
+
+
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: (0.8, 0.8)
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                #elevation: 10
+                padding: 15
+                spacing: 10
+
+                MDLabel:
+                    text: "Available Restaurants"
+                    font_size: 35
+                    halign: 'center'
+                    size_hint_y: 0.5
+                    #height: self.texture_size[1]
+                    padding_y: 10
+
+                GridLayout:
+                    cols: 2
+                    spacing: 10
+                    padding: 10
+
+                    Image:
+                        source: "C:/Users/RUDAINA/Desktop/sh/photo1.png"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        size_hint: (0.4,0.4)
+
+                    Button:
+                        id: res
+                        text: app.resName1
+                        font_size: 25
+                        halign: 'center'
+                        size_hint_y: 0.5
+                        #height: self.texture_size[1]
+                        padding_y: 10
+                        on_release: app.menue(res)
+                GridLayout:
+                    cols: 2
+                    spacing: 10
+                    padding: 10
+
+                    Image:
+                        source: "C:/Users/RUDAINA/Desktop/sh/photo2.webp"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        size_hint: (0.4,0.4)
+
+                    Button:
+                        id: res
+                        text: app.resName2
+                        font_size: 25
+                        halign: 'center'
+                        size_hint_y: 0.5
+                        #height: self.texture_size[1]
+                        padding_y: 10
+                        on_release: app.menue(res)
+
+                GridLayout:
+                    cols: 2
+                    spacing: 10
+                    padding: 10
+
+                    Image:
+                        source: "C:/Users/RUDAINA/Desktop/sh/photo3.png"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        size_hint: (0.4,0.4)
+
+                    Button:
+                        id: res
+                        text: app.resName3
+                        font_size: 25
+                        halign: 'center'
+                        size_hint_y: 0.5
+                        #height: self.texture_size[1]
+                        padding_y: 10
+                        on_release: app.menue(res)
+
+                GridLayout:
+                    cols: 2
+                    spacing: 10
+                    padding: 10
+
+                    Image:
+                        source: "C:/Users/RUDAINA/Desktop/sh/photo4.png"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        size_hint: (0.4,0.4)
+
+                    Button:
+                        id: res
+                        text: app.resName4
+                        font_size: 25
+                        halign: 'center'
+                        size_hint_y: 0.5
+                        #height: self.texture_size[1]
+                        padding_y: 10
+                        on_release: app.menue(res)
+                GridLayout:
+                    cols: 2
+                    spacing: 10
+                    padding: 10
+
+                    Image:
+                        source: "C:/Users/RUDAINA/Desktop/sh/photo5.png"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        size_hint: (0.4,0.4)
+
+                    Button:
+                        id: res
+                        text: app.resName5
+                        font_size: 25
+                        halign: 'center'
+                        size_hint_y: 0.5
+                        #height: self.texture_size[1]
+                        padding_y: 10
+                        on_release: app.menue(res)
+
+                GridLayout:
+                    cols: 2
+                    spacing: 10
+                    padding: 10
+
+                    Image:
+                        source: "C:/Users/RUDAINA/Desktop/sh/logo.png"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                        size_hint: (0.4,0.4)
+
+                    Button:
+                        text: "Psomi"
+                        font_size: 25
+                        halign: 'center'
+                        size_hint_y: 0.5
+                        #height: self.texture_size[1]
+                        padding_y: 10
+
