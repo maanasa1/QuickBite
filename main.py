@@ -31,8 +31,8 @@ kivy.require('2.1.0')
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="12345"
-  database = "qb"
+  password=""
+  database = ""
 )
 
 '''
